@@ -32,11 +32,11 @@ if (isset($_POST['submit'])) {
                 <div class="col-12 col-lg-6 col-md-6 col-sm-12 w-75">
                     <form action="" method="post">
                         <label for="username" class="form-label" style="color: white;">Username:</label>
-                        <input type="text" id="username" class="form-control" required>
+                        <input type="text" id="username" name="username" class="form-control" required>
                         <label for="email" class="form-label" style="color: white;">Email id:</label>
-                        <input type="email" class="form-control">
+                        <input type="email"  name="email" class="form-control">
                         <label for="message" class="form-label" style="color: white;">Message:</label>
-                        <input type="text-area" class="form-control"> <br>
+                        <input type="text-area" name="message" class="form-control"> <br>
                         <input type="submit" value="submit" class="btn btn-primary">
                     </form>
                 </div>
