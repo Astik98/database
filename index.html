@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <title>Portfolio</title>
+    <style>
+        @media screen and (max-width :768px) {
+            .col-12 {
+                margin-bottom: 5%;
+            }
+
+            .cover .row form {
+                margin-left: -35%;
+                width: 166%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <nav class="navbar navbar-expand-lg navbar-dark border-bottom" style="background-color: black;">
+            <div class="container">
+                <a href="#" class="navbar-brand">Astik Sharma</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#col">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="col">
+                    <ul class="navbar-nav text-white ms-auto">
+                        <li class="nav-item"><a href="./index_port.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="./project.html" class="nav-link">Projects</a></li>
+                        <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="top-cover" style="background-color: black;">
+        <div class="container" style="height: 100%;">
+            <div class="row pb-5">
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                    <p class="greet mt-5" style="color: rgb(150, 146, 146);">Hi! I am Astik Sharma,</p>
+                    <h1 class="post text-white">Web Developer</h1>
+                    <p class="content" style="color: rgb(150, 146, 146);">I am a former mechanical engineer. I have
+                        completed my graduation from Maharshi Dayand University in the year 2020. Right now I am a full
+                        stack web developer with the solid command in front-end development.
+                    </p>
+                    <!-- <button class="btn btn-primary">View Resume</button> -->
+                    <a class="btn btn-primary" href="./asset/Astik's Resume.pdf" download role="button">View Resume</a>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                    <img src="./asset/91F906A2-9CF7-48C2-91DB-86305BBFDD95.JPEG" alt="no image"
+                        class="rounded mx-auto d-block mt-5" style="width: 70%; opacity: 0.5;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project bg-black text-white" style="height: 100%;">
+        <div class="container">
+            <div class="row pt-5">
+                <h1 class="heading text-center">Projects</h1>
+            </div>
+            <div class="row pt-5">
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="card border" style="padding: 13.5%;">
+                        <div class="card-img">
+                            <img src="./asset/logo.png" class="img-fluid" alt="no image">
+                        </div>
+                        <h3><a href="https://astik98.github.io/lexequipe" target="_blank">Lex Equip</a></h3>
+                        <p class="desc text-black">It is a corporate single page website I made using html and css.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="card border" style="padding: 10%;">
+                        <div class="card-img">
+                            <img src="./asset/header-logo.png" class="img-fluid" alt="no image">
+                        </div>
+                        <h3><a href="https://astik98.github.io/alkaddir" target="_blank">Al Kadir</a></h3>
+                        <p class="desc text-black">It is a dubai based multiple pages website I made using html and css.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="card border" style="height: 100%;">
+                        <div class="card-img" style="padding: 5%;">
+                            <img src="./asset/LO.png" class="img-fluid" alt="no image">
+                        </div>
+                        <h3 class="p-name" style="margin-top: -5%; padding-left: 5%;"><a
+                                href="https://astik98.github.io/logis" target="_blank">Logis</a></h3>
+                        <p class="desc text-black" style="padding-left: 5%;">This is a logistics business website I made
+                            using html, css and bootstrap.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cover" style="background-color:black;">
+        <div class="container pt-5">
+            <h1 class="label text-white text-center">Contact</h1>
+            <div class="row" style="padding-top: 5%; padding-bottom: 5%; margin-left: 20%;">
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12 w-75">
+                    <form action="">
+                        <label for="username" class="form-label" style="color: white;">Username:</label>
+                        <input type="text" id="username" class="form-control" required>
+                        <label for="email" class="form-label" style="color: white;">Email id:</label>
+                        <input type="email" class="form-control">
+                        <label for="message" class="form-label" style="color: white;">Message:</label>
+                        <input type="text-area" class="form-control"> <br>
+                        <input type="submit" value="submit" class="btn btn-primary">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
