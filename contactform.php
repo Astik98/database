@@ -1,4 +1,5 @@
 <?php
+ob_start();
 $msg = mysqli_connect("localhost", "root", "", "databaseport");
 
 if (isset($_POST['submit'])) {
@@ -6,9 +7,12 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $message = $_POST['message'];
 
+    $select = "select name from portform where username = '$username' and email = '$email'";
+    $querry = mysqli_query($msg, $insert);
+
+
     $insert = "INSERT INTO `portform`(`username`, `email`, `message`) values ('$username', '$email', '$message')";
 
-    $querry = mysqli_query($msg, $insert);
 }
 ?>
 
@@ -45,5 +49,8 @@ if (isset($_POST['submit'])) {
     </div>
 
     <script src="asset/js/bootstrap.bundle.min.jss"></script>
+    <?php
+    ob_end_flush();
+    ?>
 </body>
 </html>
