@@ -1,27 +1,23 @@
 <?php
-ob_start();
 $msg = mysqli_connect("localhost", "root", "", "databaseport");
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $message = $_POST['message'];
-    
 
-    $select = "select name from portform where username = '$username' and email = '$email'";
-    $querry = mysqli_query($msg, $insert);
+    $insert = "INSERT INTO `portform`(`username`, `email`, `message`) values ('$username', '$email', '$message')";
 
-
-    $insert = "INSERT INTO `portform`(`id`, `username`, `email`, `message`) values ('$id', '$username', '$email', '$message')";
-
+    $query = mysqli_query($msg, $insert);
+    if ($query) {
+        header('location:formview.php');
+    }
 }
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,9 +25,10 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="asset/css/bootstrap.min.css">
     <title>Document</title>
 </head>
+
 <body>
-    
-<div class="cover" style="background-color:black;">
+
+    <div class="cover" style="background-color:black;">
         <div class="container pt-5">
             <h1 class="label text-white text-center">Contact</h1>
             <div class="row" style="padding-top: 5%; margin-left: 20%;">
@@ -40,7 +37,7 @@ if (isset($_POST['submit'])) {
                         <label for="username" class="form-label" style="color: white;">Username:</label>
                         <input type="text" id="username" name="username" class="form-control" required>
                         <label for="email" class="form-label" style="color: white;">Email id:</label>
-                        <input type="email"  name="email" class="form-control">
+                        <input type="email" name="email" class="form-control">
                         <label for="message" class="form-label" style="color: white;">Message:</label>
                         <input type="text-area" name="message" class="form-control"> <br>
                         <input type="submit" value="submit" class="btn btn-primary">
@@ -51,8 +48,6 @@ if (isset($_POST['submit'])) {
     </div>
 
     <script src="asset/js/bootstrap.bundle.min.jss"></script>
-    <?php
-    ob_end_flush();
-    ?>
 </body>
+
 </html>
