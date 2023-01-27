@@ -6,12 +6,13 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $message = $_POST['message'];
+    
 
     $select = "select name from portform where username = '$username' and email = '$email'";
     $querry = mysqli_query($msg, $insert);
 
 
-    $insert = "INSERT INTO `portform`(`username`, `email`, `message`) values ('$username', '$email', '$message')";
+    $insert = "INSERT INTO `portform`(`id`, `username`, `email`, `message`) values ('$id', '$username', '$email', '$message')";
 
 }
 ?>
@@ -29,6 +30,7 @@ if (isset($_POST['submit'])) {
     <title>Document</title>
 </head>
 <body>
+    
 <div class="cover" style="background-color:black;">
         <div class="container pt-5">
             <h1 class="label text-white text-center">Contact</h1>
