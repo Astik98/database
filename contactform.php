@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
                         <input type="email" name="email" class="form-control">
                         <label for="message" class="form-label" style="color: white;">Message:</label>
                         <input type="text-area" name="message" class="form-control"> <br>
-                        <input type="submit" value="submit" class="btn btn-primary">
+                        <input type="submit" name="submit" class="btn btn-primary">
                     </form>
                 </div>
             </div>
